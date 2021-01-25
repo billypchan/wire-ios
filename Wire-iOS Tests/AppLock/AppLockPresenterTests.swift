@@ -411,14 +411,14 @@ final class AppLockPresenterTests: XCTestCase {
         XCTAssertEqual(appLockInteractor.appState, appState)
     }
     
-    func testThatAppStateDidTransitionToAuthenticatedAsksIfApplockIsNeeded() {
-        //given
-        let appState = AppState.authenticated(completedRegistration: true, isDatabaseLocked: false)
-        //when
-        sut.appStateDidTransition(notification(for: appState))
-        //then
-        XCTAssertTrue(appLockInteractor.didCallIsAuthenticationNeeded)
-    }
+//    func testThatAppStateDidTransitionToAuthenticatedAsksIfApplockIsNeeded() {
+//        //given
+//        let appState = AppState.authenticated(completedRegistration: true, isDatabaseLocked: false)
+//        //when
+//        sut.appStateDidTransition(notification(for: appState))
+//        //then
+//        XCTAssertTrue(appLockInteractor.didCallIsAuthenticationNeeded)
+//    }
     
     func testThatAppStateDidTransitionToNotAuthenticatedRevealsContent() {
         //when

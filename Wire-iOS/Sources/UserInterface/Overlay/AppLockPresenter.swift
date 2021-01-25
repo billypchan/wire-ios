@@ -264,9 +264,9 @@ extension AppLockPresenter {
         appLockInteractorInput.appStateDidTransition(to: appState)
         switch appState {
         case .authenticated:
-//            if UIApplication.shared.applicationState == .active {
+            if UIApplication.shared.applicationState == .active {
                 requireAuthenticationIfNeeded()
-//            }
+            }
         default:
             setContents(dimmed: false)
         }
